@@ -81,7 +81,7 @@ fun ReservaFormScreen(
                     }
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFF0A6E2F)
+                    containerColor = Color(0xFF1565C0)
                 )
             )
         }
@@ -92,7 +92,7 @@ fun ReservaFormScreen(
                 .padding(padding)
                 .padding(16.dp)
                 .fillMaxSize()
-                .background(Color(0xFFE8F5E9)),
+                .background(Color(0xFFE3F2FD)),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
 
@@ -177,9 +177,7 @@ fun ReservaFormScreen(
             item {
                 Button(
                     onClick = {
-                        // ⭐️ VALIDACIÓN CRÍTICA: Asegurarse de que haya una cancha en el carrito
                         if (carritoViewModel.items.isEmpty()) {
-                            // Redirigir si el carrito está vacío (no hay nada que reservar)
                             navController.navigate("catalogo")
                             return@Button
                         }
@@ -188,15 +186,12 @@ fun ReservaFormScreen(
                         nombreError = nombreResponsable.isBlank()
                         fechaError = fecha.isBlank()
                         horaError = hora.isBlank()
-                        // La validación más probable de fallar si el usuario solo rellena 1 nombre:
                         jugadoresError = playerNames.any { it.isBlank() }
 
                         if (nombreError || fechaError || horaError || jugadoresError) {
-                            // Se detiene la ejecución si hay errores de formulario
                             return@Button
                         }
 
-                        // El resto de la lógica de Reserva se ejecuta si todas las validaciones son correctas.
                         // Construir objeto Reserva
                         val reserva = Reserva(
                             responsable = nombreResponsable,
@@ -208,20 +203,21 @@ fun ReservaFormScreen(
                             total = carritoViewModel.total()
                         )
 
-                        // Guardar en Firebase (best effort, sin esperar)
+                        // Guardar en Firebase
                         reservaViewModel.guardarReserva(reserva)
 
                         // Pasar la reserva a la pantalla de éxito
                         val json = URLEncoder.encode(Json.encodeToString(reserva), "UTF-8")
 
                         carritoViewModel.vaciarJugadores()
+                        carritoViewModel.vaciarCarrito()
 
                         navController.navigate("compraExitosa/$json")
                     },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(55.dp),
-                    colors = ButtonDefaults.buttonColors(Color(0xFF0A6E2F)),
+                    colors = ButtonDefaults.buttonColors(Color(0xFF1565C0)),
                     shape = RoundedCornerShape(10.dp)
                 ) {
                     Text("Confirmar Reserva", color = Color.White)

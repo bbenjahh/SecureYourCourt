@@ -29,7 +29,7 @@ fun CatalogoScreen(navController: NavController, viewModel: CanchasViewModel ) {
             CenterAlignedTopAppBar(
                 title = { Text("Catálogo de Canchas", color = Color.White) },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFF0A6E2F)
+                    containerColor = Color(0xFF1565C0)
                 )
             )
         }
@@ -38,7 +38,7 @@ fun CatalogoScreen(navController: NavController, viewModel: CanchasViewModel ) {
         Column(
             modifier = Modifier
                 .padding(padding)
-                .background(Color(0xFFE8F5E9))
+                .background(Color(0xFFE3F2FD))
                 .fillMaxSize()
         ) {
 
@@ -46,7 +46,7 @@ fun CatalogoScreen(navController: NavController, viewModel: CanchasViewModel ) {
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
-                ) { CircularProgressIndicator(color = Color(0xFF0A6E2F)) }
+                ) { CircularProgressIndicator(color = Color(0xFF1565C0)) }
             }
 
             if (error != null) {

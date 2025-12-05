@@ -40,8 +40,8 @@ fun AboutScreen(navController: NavController) {
                 .background(
                     Brush.verticalGradient(
                         listOf(
-                            Color(0xFF1B5E20),
-                            Color(0xFF4CAF50)
+                            Color(0xFF0D47A1),
+                            Color(0xFF2196F3)
                         )
                     )
                 ),

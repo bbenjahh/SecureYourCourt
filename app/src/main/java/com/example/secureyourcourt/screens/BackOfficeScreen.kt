@@ -30,7 +30,7 @@ fun BackOfficeScreen(navController: NavController) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Panel de Administración") }
+                title = { Text("Administración de Reservas / Gestión de Canchas") }
             )
         }
     ) { padding ->
@@ -43,7 +43,7 @@ fun BackOfficeScreen(navController: NavController) {
             verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
 
-            Text("Reservas registradas", style = MaterialTheme.typography.titleLarge)
+            Text("Reservas Registradas", style = MaterialTheme.typography.titleLarge)
 
             LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
 

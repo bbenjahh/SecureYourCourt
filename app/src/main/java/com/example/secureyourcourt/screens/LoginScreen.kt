@@ -31,7 +31,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF66BB6A)),
+            .background(Color(0xFF42A5F5)),
         contentAlignment = Alignment.Center
     ) {
         Column(
@@ -46,7 +46,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel) {
             )
 
             Text(
-                text = "Canchas Reser",
+                text = "Secure Your Court",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
@@ -61,10 +61,10 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel) {
                 },
                 label = { Text("Correo electrónico") },
                 colors = TextFieldDefaults.colors(
-                    focusedLabelColor = Color(0xFF0A6E2F),
+                    focusedLabelColor = Color(0xFF1565C0),
                     cursorColor = Color.Black,
-                    focusedIndicatorColor = Color(0xFF0A6E2F),
-                    unfocusedIndicatorColor = Color(0xFF388E3C),
+                    focusedIndicatorColor = Color(0xFF1565C0),
+                    unfocusedIndicatorColor = Color(0xFF1976D2),
                     focusedContainerColor = Color.White,
                     unfocusedContainerColor = Color.White,
                     focusedTextColor = Color.Black,
@@ -84,12 +84,11 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel) {
                 },
                 label = { Text("Contraseña") },
                 colors = TextFieldDefaults.colors(
-                    focusedLabelColor = Color(0xFF0A6E2F),
+                    focusedLabelColor = Color(0xFF1565C0), // <-- Azul oscuro
                     cursorColor = Color.Black,
-                    focusedIndicatorColor = Color(0xFF0A6E2F),
-                    unfocusedIndicatorColor = Color(0xFF388E3C),
+                    focusedIndicatorColor = Color(0xFF1565C0), // <-- Azul oscuro
+                    unfocusedIndicatorColor = Color(0xFF1976D2), // <-- Azul medio
                     focusedContainerColor = Color.White,
-                    unfocusedContainerColor = Color.White,
                     focusedTextColor = Color.Black,
                     unfocusedTextColor = Color.Black
                 ),
@@ -110,7 +109,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel) {
                         return@Button
                     }
 
-                    // Validaciones usuario normal
+                    // VALIDACIONES PARA NORMAL USER
                     when {
                         email.isBlank() || password.isBlank() -> {
                             mensajeError = "Debes ingresar tu correo y contraseña."
@@ -138,7 +137,7 @@ fun LoginScreen(navController: NavController, viewModel: AuthViewModel) {
                 colors = ButtonDefaults.buttonColors(Color.White),
                 shape = RoundedCornerShape(12.dp)
             ) {
-                Text("Iniciar Sesión", color = Color(0xFF0A6E2F), fontSize = 18.sp)
+                Text("Iniciar Sesión", color = Color(0xFF1565C0), fontSize = 18.sp)
             }
 
             if (mensajeError != null) {

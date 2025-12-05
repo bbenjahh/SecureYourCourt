@@ -31,7 +31,6 @@ fun CarritoScreen(navController: NavController, carritoViewModel: CarritoViewMod
             )
         },
         bottomBar = {
-            // 🔹 BOTÓN FIJO EN LA BARRA INFERIOR DE SCAFFOLD
             Button(
                 onClick = { navController.navigate("reservaForm") },
                 enabled = jugadores.isNotEmpty(),

@@ -23,11 +23,10 @@ class CanchasViewModel : ViewModel()  {
     fun cargarCanchas() {
         viewModelScope.launch {
             try {
-                // Llama al repositorio para cargar los datos locales
                 val data = repository.cargarCanchas()
                 canchas.value = data
                 loading.value = false
-                error.value = null // Limpiar el error si la carga es exitosa
+                error.value = null
             } catch (e: Exception) {
                 error.value = "Error al cargar canchas: ${e.message}"
                 loading.value = false

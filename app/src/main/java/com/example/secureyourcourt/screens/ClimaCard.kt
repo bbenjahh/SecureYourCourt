@@ -32,7 +32,7 @@ fun ClimaCard(
             .fillMaxWidth()
             .height(130.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFFB2DFDB) // verde suave
+            containerColor = Color(0xFFB2DFDB)
         ),
         shape = RoundedCornerShape(14.dp)
     ) {

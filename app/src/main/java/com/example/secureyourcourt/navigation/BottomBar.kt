@@ -16,7 +16,7 @@ fun BottomBar(navController: NavController, authViewModel: AuthViewModel) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 
-    NavigationBar(containerColor = Color(0xFF1B5E20)) {
+    NavigationBar(containerColor = Color(0xFF0D47A1)) {
 
         NavigationBarItem(
             selected = currentRoute == "inicio",
@@ -46,7 +46,7 @@ fun BottomBar(navController: NavController, authViewModel: AuthViewModel) {
             label = { Text("Contacto", color = Color.White) }
         )
 
-        // ⭐ SOLO ADMIN VE ESTA OPCIÓN ⭐
+        //SOLO EL ADMIN VE ESTA OPC
         if (authViewModel.esAdmin()) {
             NavigationBarItem(
                 selected = currentRoute == "backoffice",

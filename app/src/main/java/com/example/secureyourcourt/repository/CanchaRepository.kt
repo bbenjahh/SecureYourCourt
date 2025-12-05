@@ -18,7 +18,7 @@ class CanchaRepository {
     "dimensiones": "La cancha cuenta con 120 metros de largo por 90 metros de ancho.",
     "medidas": "Cada arco cuenta con 7.30 metros de ancho por 2.45 metros de alto.",
     "jugadores": "La capacidad para la cancha son de 22 jugadores.",
-    "descripcion": "Cancha de Futvol 11, Pasto Sintético.",
+    "descripcion": "Cancha de Futbol 11, Pasto Sintético.",
     "ubicacion": "C. Diecinueve A 1066, Peñalolén",
     "precioHora": 55600.0,
     "imagen": "futbol"
@@ -74,7 +74,7 @@ class CanchaRepository {
 ]
 """
 
-    // Ahora esta función carga los datos localmente.
+    // Carga los datos localmente.
     suspend fun cargarCanchas(): List<Cancha> {
         delay(500) // Simula la latencia de red/carga.
         return try {
@@ -86,7 +86,7 @@ class CanchaRepository {
         }
     }
 
-    // Ahora esta función obtiene los datos localmente.
+    // Obtiene los datos localmente.
     suspend fun obtenerCanchaPorId(id: Int): Cancha {
         delay(100) // Simula la latencia de red/carga.
         val listType = object : TypeToken<List<Cancha>>() {}.type

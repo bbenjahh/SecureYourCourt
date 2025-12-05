@@ -31,8 +31,8 @@ fun InicioScreen(navController: NavController) {
             .background(
                 Brush.verticalGradient(
                     listOf(
-                        Color(0xFF1B5E20),
-                        Color(0xFF4CAF50)
+                        Color(0xFF0D47A1),
+                        Color(0xFF2196F3)
                     )
                 )
             ),
@@ -52,7 +52,7 @@ fun InicioScreen(navController: NavController) {
             )
 
             Text(
-                text = "Canchas Reser",
+                text = "Secure Your Court",
                 fontSize = 34.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
@@ -73,21 +73,21 @@ fun InicioScreen(navController: NavController) {
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(Color.White)
             ) {
-                Icon(Icons.Filled.SportsSoccer, contentDescription = "Canchas", tint = Color(0xFF1B5E20))
+                Icon(Icons.Filled.SportsSoccer, contentDescription = "Canchas", tint = Color(0xFF0D47A1))
                 Spacer(Modifier.width(8.dp))
-                Text("Ver Canchas", color = Color(0xFF1B5E20), fontSize = 18.sp)
+                Text("Ver Canchas", color = Color(0xFF0D47A1), fontSize = 18.sp)
             }
 
-            // BOTÓN SOBRE DE NOSOTROS
+            // BOTÓN ACERCA DE NOSOTROS
             Button(
                 onClick = { navController.navigate("about") },
                 modifier = Modifier.fillMaxWidth().height(55.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(Color.White)
             ) {
-                Icon(Icons.Filled.Info, contentDescription = "Info", tint = Color(0xFF1B5E20))
+                Icon(Icons.Filled.Info, contentDescription = "Info", tint = Color(0xFF0D47A1))
                 Spacer(Modifier.width(8.dp))
-                Text("Acerca de Nosotros", color = Color(0xFF1B5E20), fontSize = 18.sp)
+                Text("Acerca de Nosotros", color = Color(0xFF0D47A1), fontSize = 18.sp)
             }
 
             // BOTÓN DE CONTACTO
@@ -97,9 +97,9 @@ fun InicioScreen(navController: NavController) {
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(Color.White)
             ) {
-                Icon(Icons.Filled.ContactMail, contentDescription = "Contacto", tint = Color(0xFF1B5E20))
+                Icon(Icons.Filled.ContactMail, contentDescription = "Contacto", tint = Color(0xFF0D47A1))
                 Spacer(Modifier.width(8.dp))
-                Text("Contacto", color = Color(0xFF1B5E20), fontSize = 18.sp)
+                Text("Contacto", color = Color(0xFF0D47A1), fontSize = 18.sp)
             }
         }
     }

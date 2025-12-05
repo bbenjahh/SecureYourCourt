@@ -15,7 +15,6 @@ object FakeDatabase {
         return usuarios.any { it.email == email && it.password == password }
     }
 
-    // <- Agregar este método para limpiar la base antes de cada test
     fun clear() {
         usuarios.clear()
     }

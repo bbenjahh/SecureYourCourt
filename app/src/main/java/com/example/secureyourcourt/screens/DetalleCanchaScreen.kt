@@ -40,7 +40,7 @@ fun DetalleCanchaScreen(
             )
         },
 
-        bottomBar = { // Boton siempre visible
+        bottomBar = {
             cancha?.let {
                 Button(
                     onClick = {

@@ -31,62 +31,62 @@ fun NavGraph(
         startDestination = "login"
     ) {
 
-        // INICIO DE SESION
+        //INICIO DE SESION
         composable("login") {
             LoginScreen(navController, authViewModel)
         }
 
-        // REGISTRO
+        //REGISTRO
         composable("register") {
             RegisterScreen(navController, authViewModel)
         }
 
-        // INICIO (CON BARRA)
+        //CON BARRA
         composable("inicio") {
             Scaffold(bottomBar = { BottomBar(navController, authViewModel) }) {
                 InicioScreen(navController)
             }
         }
 
-        // CATALOGO (CON BARRA)
+        //CON BARRA
         composable("catalogo") {
             Scaffold(bottomBar = { BottomBar(navController, authViewModel) }) {
                 CatalogoScreen(navController, canchasViewModel)
             }
         }
 
-        // ACERCA DE NOSOTROS (CON BARRA)
+        //CON BARRA
         composable("about") {
             Scaffold(bottomBar = { BottomBar(navController, authViewModel) }) {
                 AboutScreen(navController)
             }
         }
 
-        // CONTACTO (CON BARRA)
+        //CON BARRA
         composable("contact") {
             Scaffold(bottomBar = { BottomBar(navController, authViewModel) }) {
                 ContactScreen(navController)
             }
         }
 
-        // CARRITO (SIN BARRA)
+        //SIN BARRA
         composable("carrito") {
             CarritoScreen(navController, carritoViewModel)
         }
 
-        // BACKOFFICE (ADMIN)
+        //ADMIN
         composable("backoffice") {
             if (authViewModel.esAdmin()) BackOfficeScreen(navController)
             else Text("Acceso Denegado.")
         }
 
-        // AGREGAR PRODUCTO (ADMIN)
+        //ADMIN
         composable("agregarProducto") {
             if (authViewModel.esAdmin()) AgregarProductoScreen(navController)
             else Text("Acceso Denegado.")
         }
 
-        // DETALLE CANCHA (SIN BARRA)
+        //SIN BARRA
         composable(
             "detalle/{id}",
             arguments = listOf(navArgument("id") { type = NavType.IntType })
@@ -107,12 +107,12 @@ fun NavGraph(
             }
         }
 
-        // FORM RESERVA (SIN BARRA)
+        //SIN BARRA
         composable("reservaForm") {
             ReservaFormScreen(navController, carritoViewModel)
         }
 
-        // COMPRA EXITOSA (SIN BARRA)
+        //SIN BARRA
         composable(
             "compraExitosa/{resumen}",
             arguments = listOf(navArgument("resumen") { type = NavType.StringType })
@@ -120,7 +120,7 @@ fun NavGraph(
             CompraExitosaScreen(navController, entry.arguments?.getString("resumen") ?: "")
         }
 
-        // COMPRA RECHAZADA (SIN BARRA)
+        //SIN BARRA
         composable(
             "compraRechazada/{msg}",
             arguments = listOf(navArgument("msg") { defaultValue = "Hubo un error." })

@@ -9,6 +9,6 @@ data class Cancha(
     val jugadores: String,
     val descripcion: String?,
     val ubicacion: String,
-    val precioHora: Double,
+    val precioHora: Int,
     val imagen: String
 )

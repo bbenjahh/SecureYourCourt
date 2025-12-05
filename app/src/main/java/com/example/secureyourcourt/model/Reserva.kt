@@ -10,5 +10,5 @@ data class Reserva(
     val hora: String = "",
     val canchaId: Int = 0,
     val canchaNombre: String = "",
-    val total: Double = 0.0
+    val total: Int = 0
 )

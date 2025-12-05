@@ -38,16 +38,16 @@ fun RegisterScreen(navController: NavController, viewModel: AuthViewModel) {
         unfocusedContainerColor = Color.White,
         focusedTextColor = Color.Black,
         unfocusedTextColor = Color.Black,
-        focusedIndicatorColor = Color(0xFF0A6E2F),
-        unfocusedIndicatorColor = Color(0xFF388E3C),
+        focusedIndicatorColor = Color(0xFF1565C0), // <-- Azul oscuro
+        unfocusedIndicatorColor = Color(0xFF1976D2), // <-- Azul medio
         cursorColor = Color.Black,
-        focusedLabelColor = Color(0xFF0A6E2F)
+        focusedLabelColor = Color(0xFF1565C0) // <-- Azul oscuro
     )
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF66BB6A)),
+            .background(Color(0xFF42A5F5)),
         contentAlignment = Alignment.Center
     ) {
 
@@ -57,13 +57,13 @@ fun RegisterScreen(navController: NavController, viewModel: AuthViewModel) {
         ) {
 
             Image(
-                painter = painterResource(id = R.drawable.fff),
+                painter = painterResource(id = R.drawable.ic_launcher_foreground),
                 contentDescription = null,
                 modifier = Modifier.size(120.dp)
             )
 
             Text(
-                text = "Canchas Reser",
+                text = "Secure Your Court",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
@@ -178,7 +178,7 @@ fun RegisterScreen(navController: NavController, viewModel: AuthViewModel) {
                 colors = ButtonDefaults.buttonColors(Color.White),
                 shape = RoundedCornerShape(12.dp)
             ) {
-                Text("Registrarse", color = Color(0xFF0A6E2F), fontSize = 18.sp)
+                Text("Registrarse", color = Color(0xFF1565C0), fontSize = 18.sp)
             }
 
             if (mensajeErrorGeneral != null) {

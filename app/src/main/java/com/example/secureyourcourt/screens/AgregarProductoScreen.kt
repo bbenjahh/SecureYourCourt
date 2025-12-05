@@ -31,10 +31,10 @@ fun AgregarProductoScreen(navController: NavController) {
                 .fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            OutlinedTextField(value = nombre, onValueChange = { nombre = it }, label = { Text("Nombre de la cancha") }, modifier = Modifier.fillMaxWidth())
-            OutlinedTextField(value = precio, onValueChange = { precio = it }, label = { Text("Precio por hora") }, modifier = Modifier.fillMaxWidth())
-            OutlinedTextField(value = descripcion, onValueChange = { descripcion = it }, label = { Text("Descripción") }, modifier = Modifier.fillMaxWidth())
-            OutlinedTextField(value = imagen, onValueChange = { imagen = it }, label = { Text("URL de imagen") }, modifier = Modifier.fillMaxWidth())
+            OutlinedTextField(value = nombre, onValueChange = { nombre = it }, label = { Text("Nombre de la cancha: ") }, modifier = Modifier.fillMaxWidth())
+            OutlinedTextField(value = precio, onValueChange = { precio = it }, label = { Text("Precio por hora: ") }, modifier = Modifier.fillMaxWidth())
+            OutlinedTextField(value = descripcion, onValueChange = { descripcion = it }, label = { Text("Descripción: ") }, modifier = Modifier.fillMaxWidth())
+            OutlinedTextField(value = imagen, onValueChange = { imagen = it }, label = { Text("URL de imagen: ") }, modifier = Modifier.fillMaxWidth())
 
             Spacer(modifier = Modifier.height(20.dp))
 
@@ -44,7 +44,7 @@ fun AgregarProductoScreen(navController: NavController) {
                 },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Guardar Cancha")
+                Text("Guardar Cancha.")
             }
         }
     }

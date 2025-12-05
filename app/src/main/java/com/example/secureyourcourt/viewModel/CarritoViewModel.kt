@@ -32,7 +32,7 @@ class CarritoViewModel : ViewModel() {
         items.remove(item)
     }
 
-    fun actualizarCantidad(item: Carrito, cantidad: Int) {
+    fun actualizarCantidad(item: Carrito, cantidad: Int) { // No se usara aun
         if (cantidad <= 0) {
             eliminarDelCarrito(item)
         } else {
@@ -41,7 +41,7 @@ class CarritoViewModel : ViewModel() {
         }
     }
 
-    fun total(): Double {
+    fun total(): Int {
         return items.sumOf { it.cancha.precioHora * it.cantidad }
     }
 
@@ -49,13 +49,12 @@ class CarritoViewModel : ViewModel() {
         items.clear()
     }
 
-    // MANEJO DE JUGADORES
+    //MANEJO DE JUGADORES
     private val _jugadores = MutableStateFlow<List<Int>>(emptyList())
     val jugadores: StateFlow<List<Int>> = _jugadores.asStateFlow()
 
 
     //Agrega un jugador nuevo con id ascendente
-
     fun agregarJugador() {
         val current = _jugadores.value.toMutableList()
         if (current.size >= 22) return
@@ -64,7 +63,7 @@ class CarritoViewModel : ViewModel() {
         _jugadores.value = current
     }
 
-    // Elimina el último jugador (si hay)
+    // Elimina el último jugador
     fun eliminarJugador() {
         val current = _jugadores.value.toMutableList()
         if (current.isNotEmpty()) {

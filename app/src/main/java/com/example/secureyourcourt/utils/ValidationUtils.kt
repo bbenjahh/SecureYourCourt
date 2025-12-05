@@ -1,13 +1,13 @@
 package com.example.secureyourcourt.utils
 
 
-// VALIDACION CORREO
+// VALIDACION DEL CORREO
 fun String.isValidEmail(): Boolean {
     val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$".toRegex()
     return this.isNotBlank() && emailRegex.matches(this)
 }
 
-// VALIDACION RUT
+// VALIDACION DEL RUT
 fun String.isValidRut(): Boolean {
     val rutClean = this
         .replace(".", "")
