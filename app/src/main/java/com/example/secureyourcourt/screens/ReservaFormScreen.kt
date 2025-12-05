@@ -177,16 +177,26 @@ fun ReservaFormScreen(
             item {
                 Button(
                     onClick = {
-                        // Validaciones
-                        nombreError = nombreResponsable.isBlank()
-                        fechaError = fecha.isBlank()
-                        horaError = hora.isBlank()
-                        jugadoresError = playerNames.any { it.isBlank() }
-
-                        if (nombreError || fechaError || horaError || jugadoresError) {
+                        // ⭐️ VALIDACIÓN CRÍTICA: Asegurarse de que haya una cancha en el carrito
+                        if (carritoViewModel.items.isEmpty()) {
+                            // Redirigir si el carrito está vacío (no hay nada que reservar)
+                            navController.navigate("catalogo")
                             return@Button
                         }
 
+                        // Validaciones de campos
+                        nombreError = nombreResponsable.isBlank()
+                        fechaError = fecha.isBlank()
+                        horaError = hora.isBlank()
+                        // La validación más probable de fallar si el usuario solo rellena 1 nombre:
+                        jugadoresError = playerNames.any { it.isBlank() }
+
+                        if (nombreError || fechaError || horaError || jugadoresError) {
+                            // Se detiene la ejecución si hay errores de formulario
+                            return@Button
+                        }
+
+                        // El resto de la lógica de Reserva se ejecuta si todas las validaciones son correctas.
                         // Construir objeto Reserva
                         val reserva = Reserva(
                             responsable = nombreResponsable,

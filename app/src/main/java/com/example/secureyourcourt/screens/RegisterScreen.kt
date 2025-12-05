@@ -17,6 +17,7 @@ import androidx.navigation.NavController
 import com.example.secureyourcourt.viewmodel.AuthViewModel
 import com.example.secureyourcourt.utils.isValidEmail
 import com.example.secureyourcourt.utils.isValidRut
+import com.example.secureyourcourt.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

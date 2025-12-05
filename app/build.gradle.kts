@@ -64,8 +64,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
-// Gson (parsing JSON)
-    implementation("com.google.code.gson:gson:2.9.0")
 // Coil - carga de imágenes en Compose (opcional si usas URLs)
     implementation("io.coil-kt:coil-compose:2.3.0")
     implementation(libs.androidx.core.ktx)
@@ -94,14 +92,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
     implementation("androidx.compose.ui:ui:1.4.0")
     implementation("androidx.compose.material3:material3:1.0.0-alpha01")
-    implementation ("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.compose.material:material:1.6.0")
-// OkHttp logging (opcional, útil para debug)
-    implementation ("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation ("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
 // Room
     implementation ("androidx.room:room-runtime:2.6.1")
@@ -118,7 +111,7 @@ dependencies {
 // Room
     implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
 
-    // Firestore ⭐
+    // Firestore
     implementation("com.google.firebase:firebase-firestore-ktx")
 
     // Para analytics si lo quieres (opcional)

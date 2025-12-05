@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "496046224296",
-    "project_id": "securetourcourt-7ced9",
-    "storage_bucket": "securetourcourt-7ced9.firebasestorage.app"
+    "project_id": "secureyourcourt-7ced9",
+    "storage_bucket": "secureyourcourt-7ced9.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:496046224296:android:a34814666b1f5ff180e39d",
         "android_client_info": {
-          "package_name": "com.example.securetourcourt"
+          "package_name": "com.example.secureyourcourt"
         }
       },
       "oauth_client": [],

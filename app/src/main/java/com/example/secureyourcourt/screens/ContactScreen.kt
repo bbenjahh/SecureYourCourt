@@ -79,14 +79,14 @@ fun ContactScreen(navController: NavController) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(Icons.Default.Phone, contentDescription = null, tint = Color.White)
                     Spacer(modifier = Modifier.width(10.dp))
-                    Text("+56 9 5555 5555", fontSize = 18.sp, color = Color.White)
+                    Text("+56 9 2143 6587", fontSize = 18.sp, color = Color.White)
                 }
 
                 // HORARIO
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(Icons.Default.Schedule, contentDescription = null, tint = Color.White)
                     Spacer(modifier = Modifier.width(10.dp))
-                    Text("Atención: 9:00 AM - 22:00 PM", fontSize = 18.sp, color = Color.White)
+                    Text("Atención: 9:50 AM - 22:50 PM", fontSize = 18.sp, color = Color.White)
                 }
 
                 // REDES SOCIALES

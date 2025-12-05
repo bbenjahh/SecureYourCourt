@@ -20,6 +20,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.ContactMail
 import androidx.compose.material.icons.filled.SportsSoccer
+import com.example.secureyourcourt.R
 
 @Composable
 fun InicioScreen(navController: NavController) {
